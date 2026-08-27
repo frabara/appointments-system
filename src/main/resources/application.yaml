@@ -1,5 +1,5 @@
 spring:
   application:
-    name: sgc
+    name: sgc-appointments
 server:
   port: 8056
