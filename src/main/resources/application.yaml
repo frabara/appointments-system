@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sgc
+server:
+  port: 8056
