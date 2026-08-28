@@ -39,14 +39,14 @@ pipeline {
             sh '''
                 curl -X POST "http://n8n-app:5678/webhook-test/781ed526-bf90-4035-bc20-5170532c8d45" \
                 -H "Content-Type: application/json" \
-                -d '{"job": "${JOB_NAME}", "build": "${BUILD_NUMBER}", "status": "SUCCESS"}'
+                -d '{"job": "${env.JOB_NAME}", "build": "${env.BUILD_NUMBER}", "status": "SUCCESS"}'
             '''
         }
         failure {
             sh '''
                 curl -X POST "http://n8n-app:5678/webhook-test/781ed526-bf90-4035-bc20-5170532c8d45" \
                 -H "Content-Type: application/json" \
-                -d '{"job": "${JOB_NAME}", "build": "${BUILD_NUMBER}", "status": "FAILURE"}'
+                -d '{"job": "${env.JOB_NAME}", "build": "${env.BUILD_NUMBER}", "status": "FAILURE"}'
             '''
         }
     }
