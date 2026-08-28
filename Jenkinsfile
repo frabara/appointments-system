@@ -17,12 +17,14 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 // Add your build commands here (e.g., sh 'mvn clean package' or sh 'npm run build')
+                sh 'mvn clean package'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running unit tests...'
                 // Add your testing commands here (e.g., sh 'mvn test' or sh 'npm test')
+                sh 'mvn test'
             }
         }
         stage('Deploy') {
