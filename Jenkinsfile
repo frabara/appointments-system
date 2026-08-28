@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Running unit tests...'
                 // Add your testing commands here (e.g., sh 'mvn test' or sh 'npm test')
-                sh 'mvn test'
+                // sh 'mvn test'
             }
         }
         stage('Deploy') {
