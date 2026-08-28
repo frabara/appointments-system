@@ -2,7 +2,7 @@ pipeline {
     agent any 
 
     tools {
-        maven 'maven3' // Matches the name configured in Manage Jenkins -> Tools
+        maven 'maven' // Matches the name configured in Manage Jenkins -> Tools
         jdk 'jdk17'
     }
 
@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo 'Checking out source code...'
-                 git branch: 'main', url: 'https://github.com/frabara/sgc.git'
+                 git branch: 'main', url: 'https://github.com/frabara/appointments-system.git'
             }
         }
         stage('Build') {
